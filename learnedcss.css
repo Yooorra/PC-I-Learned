@@ -1,0 +1,194 @@
+body {
+    background-image: url(imgs/webpage\ bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Make the body a flex container */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    min-block-size: 100vh; /* Ensure body takes full viewport height */
+    padding-inline-start: 5%;
+    padding-inline-end: 5%;
+    padding-block-start: 2%;
+    font-family: microsoft98;
+    padding-bottom: 4%;
+}
+
+@font-face {
+    font-family: 'microsoft98';
+    src: url(fonts/micross.woff);
+}
+
+h2 {
+    font-family: microsoft98;
+    text-align: center; /* Center aligns the text */
+    margin: 0 auto; /* Ensures proper centering */
+}
+
+.featheredBox {
+    inline-size: 1000px;
+    block-size: auto; /* Adjust to fit content dynamically */
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); 
+    overflow: hidden;
+    max-inline-size: 60vw; /* Limit the width to 90% of the viewport width */
+    margin: 0 auto; /* Center the box horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.featheredBox h1 {
+    display: flex; /* Make the h1 container a flexbox */
+    align-items: center; /* Align GIFs and text vertically */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Add spacing between the GIFs and the text */
+    text-align: center;
+}
+
+.featheredBox p {
+    text-align: center;
+}
+
+.top_gif {
+    inline-size: 30px;
+    block-size: 30px;
+}
+
+.everyTips {
+    padding-block-start: 5%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.everyTips h2 {
+    font-size: 34px;
+    display: flex;          /* Flex container for text and GIF */
+    align-items: center;    /* Vertically align the text and GIF */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px;              /* Add space between the text and GIF */
+    text-align: center;     /* Ensure the text itself is center-aligned */
+    margin: 20px 0;         /* Add vertical spacing */
+}
+
+.everyTips p {
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.h2-container {
+    display: flex; /* Makes the container a Flexbox */
+    align-items: center; /* Vertically aligns text and images */
+    justify-content: center; /* Centers content horizontally */
+    gap: 10px; /* Adds space between the elements */
+    text-align: center; /* Ensures text stays centered */
+}
+
+.h2-container h2 {
+    margin: 0; /* Removes extra spacing around the heading */
+    font-size: 34px; /* Adjust heading size */
+    font-family: microsoft98; /* Use your desired font */
+}
+
+.gif_tip {
+    inline-size: 50px;
+    block-size: auto;
+}
+
+.tip_underP {
+    display: block;
+    margin: 0 auto;
+  }
+
+.audio-controls {
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    display: flex;
+    align-items: center; /* Align icons and text vertically */
+    gap: 10px; /* Add space between icons and text */
+    z-index: 1000; /* Keep controls above other elements */
+    max-inline-size: 90%; /* Prevent controls from exceeding screen width */
+}
+
+.audio-icon {
+    inline-size: 5vw; /* Icon size adjusts based on viewport width */
+    max-inline-size: 35px; /* Prevent icons from becoming too large */
+    block-size: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.audio-icon:hover {
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+.audio-text {
+    font-family: 'microsoft98', sans-serif; /* Match your website's font */
+    font-size: 0.8vw; /* Adjust font size relative to viewport width */
+    color: #ffffff; /* Text color */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    max-inline-size: 200px; /* Prevent text from becoming too wide */
+}
+
+p {
+    font-family: microsoft98;
+    word-wrap: break-word; /* Ensure text wraps within paragraphs */
+    overflow-wrap: break-word;
+}
+
+.tips p {
+    font-family: microsoft98;
+    text-align: center;
+    display: flex;
+}
+
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0 auto; /* Center the list horizontally */
+    text-align: center; /* Center the text inside the list items */
+    max-width: 80%; /* Optional: Limit the width of the list for better alignment */
+}
+
+li {
+    font-family: microsoft98;
+    color: #f0f0f0;
+    margin-bottom: 10px; /* Add spacing between list items */
+    text-align: center; /* Ensure text within the list item is centered */
+}
+
+/* Media Queries for Smaller Devices */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .audio-icon {
+        inline-size: 6vw; /* Slightly larger icons for smaller devices */
+        max-inline-size: 35px;
+    }
+
+    .audio-text {
+        font-size: 1vw; /* Increase text size slightly */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .audio-controls {
+        inset-block-start: 5px; /* Adjust spacing at the top */
+        inset-inline-end: 5px;
+        gap: 5px;
+    }
+
+    .audio-icon {
+        inline-size: 8vw; /* Larger relative size for small screens */
+        max-inline-size: 30px;
+    }
+
+    .audio-text {
+        font-size: 2.5vw; /* Increase text size for readability */
+        max-inline-size: 180px; /* Limit width of the text */
+    }
+}
